@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(254, 254, 230);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .faq h2 {
+            margin-bottom: 10px;
+            cursor: pointer;
+            /* Add cursor pointer for clickable effect */
+        }
+
+        .faq p {
+            margin-bottom: 5px;
+            display: none;
+            /* Hide answers by default */
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 800px) {
+            .container {
+                padding: 10px;
+            }
+
+            .faq h2 {
+                font-size: 1.2rem;
+            }
+
+            .faq p {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                max-width: 90%;
+            }
+
+            .header img {
+                width: 100%;
+            }
+
+            .slogan {
+                font-size: 1rem;
+            }
+
+            .heading {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Additional Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            max-width: 100%;
+            height: auto;
+            /* height: 650px; */
+        }
+
+        .slogan {
+            font-size: 1.2rem;
+            font-style: italic;
+            font-size: xx-large;
+        }
+
+        .heading {
+            font-family: "Arial Black", sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Animation */
+        .faq p.animate__animated.animate__fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+            /* Apply fadeIn animation to answers */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header animate__animated animate__fadeIn">
+            <img src="biri.PNG" alt="Biri Logo">
+            <p class="slogan">Break It Recycle It</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+        <h1 class="heading animate__animated animate__fadeIn">FAQs</h1>
+
+        <div class="faq animate__animated animate__fadeIn">
+            <h2 onclick="toggleAnswer(1)">What is Biri?</h2>
+            <p id="answer1">When we conducted research, we found that we can recycle eggshells and extract products from
+                them that we can benifit from.</p>
+        </div>
+
+        <div class="faq animate__animated animate__fadeIn">
+            <h2 onclick="toggleAnswer(2)">Why did we make a Biri?</h2>
+            <p id="answer2">We created an eggshell project to help people with special needs,In order to provide
+                products to the Egyptian market at a competitive price.</p>
+        </div>
+
+        <div class="faq animate__animated animate__fadeIn">
+            <h2 onclick="toggleAnswer(3)">What did we get from Biri project?</h2>
+            <p id="answer3">Collagen, Calcium Chloride and Hyaluronic acid.</p>
+        </div>
+
+        <div class="faq animate__animated animate__fadeIn">
+            <h2 onclick="toggleAnswer(4)">Benefits of Biri?</h2>
+            <p id="answer4">We help companies provide useful products, we produce natural products that are useful to
+                people, and we reduce the expenses incurred when importing products from abroad We provide people with
+                special needs with job opportunities.</p>
+        </div>
+
+        <div class="faq animate__animated animate__fadeIn">
+            <h2 onclick="toggleAnswer(5)">Why choose Biri products?</h2>
+            <p id="answer5">Biri Products have a high quality and cheap prices.</p>
+        </div>
+
+        <div class="faq animate__animated animate__fadeIn">
+            <h2 onclick="toggleAnswer(6)">How can you buy Biri products?</h2>
+            <p id="answer6">You can buy our products from our store on mobile application that will coming soon to the
+                apple store and google play and also from online store coming soon.</p>
+        </div>
+
+        <!-- Add more FAQ items as needed -->
+    </div>
+
+
+    <script>
+        function toggleAnswer(num) {
+            var answer = document.getElementById('answer' + num);
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                setTimeout(function () {
+                    answer.classList.add('animate__fadeIn');
+                }, 100); // Delay to ensure animation is applied after display change
+            } else {
+                answer.style.display = 'none';
+                answer.classList.remove('animate__fadeIn');
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
